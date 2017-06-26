@@ -1,10 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const MyFirstComponent = React.createElement(
-  'h1', 
-  { style: { color: 'cornflowerblue' } }, 
-  'Welcome to React!'
-);
+// import NorthcoderList from './components/NorthcoderList';
+import Counter from './components/Counter';
 
-ReactDOM.render(Hello, document.getElementById('root'));
+/*
+const tutors = [
+    {name: 'Mauro'},
+    {name: 'Harriet', color: 'cornflowerblue'},
+    {name: 'Daryl'},
+    {name: 'Sam', color: 'green'},
+    {name: 'Ruth'},
+    {name: 'James'}
+];
+*/
+
+var counterList = <div>
+    <Counter title="Bottles of Water" />
+    <Counter title="Bugs fixed" />
+    <Counter title="Steps taken" />
+</div>;
+  //  <NorthcoderList northcoders={tutors} />,
+
+ReactDOM.render(
+    counterList,
+    document.getElementById('root')
+);
